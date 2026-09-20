@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class AccountsServiceImpl implements IAccountsService {
 
     private AccountsRepository accountsRepository;
-    private CustomerRepository customerRespository;
+    private CustomerRepository customerRepository;
 
     /**
      * @param customerDto - CustomerDto Object
