@@ -14,7 +14,7 @@ public class AccountsDto {
     private Long accountNumber;
 
     @NotEmpty(message = "AccountType can not be a null or empty")
-    @Size(min = 3, max = 30, message = "AccountType length should be between 3 and 30") // در صورت نیاز
+    @Size(min = 3, max = 30, message = "AccountType length should be between 3 and 30")
     private String accountType;
 
     @NotEmpty(message = "BranchAddress can not be a null or empty")
