@@ -136,7 +136,7 @@
                 <version>3.5.1</version>
                 <configuration>
                     <to>
-                        <image>amirmohammadz/${project.artifactId}:s4</image>
+                        <image>amirmohammadz/${project.artifactId}:s6</image>
                     </to>
                 </configuration>
             </plugin>
