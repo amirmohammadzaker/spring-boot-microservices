@@ -132,7 +132,7 @@
                 <version>3.5.1</version>
                 <configuration>
                     <to>
-                        <image>amirmohammadz/${project.artifactId}:s6</image>
+                        <image>amirmohammadz/${project.artifactId}:s7</image>
                     </to>
                 </configuration>
             </plugin>
