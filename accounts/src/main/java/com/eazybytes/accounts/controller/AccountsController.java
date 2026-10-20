@@ -40,10 +40,9 @@ import org.springframework.web.bind.annotation.*;
 @Validated
 public class AccountsController {
 
-    private final IAccountsService iAccountsService;
-
     private static final Logger logger = LoggerFactory.getLogger(AccountsController.class);
 
+    private final IAccountsService iAccountsService;
 
     public AccountsController(IAccountsService iAccountsService) {
         this.iAccountsService = iAccountsService;
@@ -236,11 +235,18 @@ public class AccountsController {
             )
     }
     )
+    @RateLimiter(name= "getJavaVersion", fallbackMethod = "getJavaVersionFallback")
     @GetMapping("/java-version")
     public ResponseEntity<String> getJavaVersion() {
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(environment.getProperty("JAVA_HOME"));
+    }
+
+    public ResponseEntity<String> getJavaVersionFallback(Throwable throwable) {
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body("Java 21");
     }
 
     @Operation(
